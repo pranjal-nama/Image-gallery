@@ -1,25 +1,13 @@
-/* Header.css */
-
-.app-bar {
-    background-color: #ffffff; 
-}
+.textFieldCustomStyles {
+    background-color: #ECECEC;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 4px;
+  }
   
-.toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-  
-.search-bar {
-    background-color: #c4c4c4; 
-    border-radius: 4px; 
-}
-  
-.search-bar .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-    border-color: transparent; 
-}
-  
-.search-bar .MuiOutlinedInput-input {
-    color: #333333;
-}
+  .textFieldCustomStyles .MuiOutlinedInput-root {
+    border-radius: 4px;
+    padding: 8px;
+    height: 40px;
+  }
   

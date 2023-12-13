@@ -11,23 +11,24 @@ const Header = ({ handleSearch }) => {
     };
 
 	return (
-		<AppBar position="static">
-			<Toolbar>
-				<Typography
-					variant="h6"
-					component="div"
-					sx={{ flexGrow: 1 }}
-				>
-					Image Gallery
-				</Typography>
+		<AppBar position="static" sx={{ backgroundColor: '#ffffff' }}> 
+            <Toolbar sx={{ justifyContent: 'center' }}>
+                <Typography
+                    variant="h5"
+                    component="div"
+                    sx={{ flexGrow: 1 }}
+					color="common.black"
+                >
+                    Image Gallery
+                </Typography>
                 <TextField
                     label="Search"
                     variant="outlined"
                     onChange={handleInputChange}
-                    sx={{ maxWidth: '300px' }}
+					className="textFieldCustomStyles" 
                 />
-			</Toolbar>
-		</AppBar>
+            </Toolbar>
+        </AppBar>
 	);
 }
 
