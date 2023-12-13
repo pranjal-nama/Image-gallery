@@ -8,10 +8,10 @@ function App() {
     { url: '/src/assets/2.jpg', alt: 'Image 2' },
   ];
   return (
-    <>
-      <Header/>
+    <div className="app">
+      <Header />
       <ImageGrid images={images} />
-    </>
+    </div>
   )
 }
 
