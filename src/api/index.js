@@ -15,7 +15,6 @@ export const fetchImages = async (query) => {
     const response = await unsplashAPI.get('/photos', {
       params: { query, per_page: 10 },
     });
-    console.log("response...............", response.data)
     return response.data;
   } catch (error) {
     console.error('Error fetching images:', error);
