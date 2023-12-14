@@ -1,13 +1,11 @@
 import { Card, CardMedia, Grid } from "@mui/material";
 import './imageGrid.css';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ImageModal from "../imageModal/imageModal";
-import { fetchImages } from "../../api";
 
-const ImageGrid = () => {
+const ImageGrid = ({images}) => {
     const [open, setOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
-    const [images, setImages] = useState([]);
 
     const handleImageClick = (image) => {
         setSelectedImage(image);
@@ -18,19 +16,6 @@ const ImageGrid = () => {
         setOpen(false);
         setSelectedImage(null);
     };
-
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const data = await fetchImages('nature');
-            setImages(data);
-          } catch (error) {
-            console.error('Error fetching images:', error);
-          }
-        };
-    
-        fetchData();
-      }, []);
 
     return(
         <>
