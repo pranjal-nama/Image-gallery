@@ -11,7 +11,12 @@ const Header = ({ handleSearch }) => {
     const handleInputChange = (event) => {
         const term = event.target.value;
         setSearchTerm(term);
-        handleSearch(term); 
+    };
+
+    const handleSearchOnKeyPress = () => {
+        if (event.key === 'Enter') {
+            handleSearch(searchTerm);
+        }
     };
 
 	return (
@@ -29,6 +34,7 @@ const Header = ({ handleSearch }) => {
                     label="Search"
                     variant="outlined"
                     onChange={handleInputChange}
+                    onKeyPress={handleSearchOnKeyPress}
 					className="textFieldCustomStyles" 
                 />
             </Toolbar>
