@@ -1,8 +1,8 @@
-import './App.css'
 import { useState, useEffect } from 'react';
 import Header from './components/header/header';
 import ImageGrid from './components/imageGrid/imageGrid'
 import { fetchImages } from './api';
+import './App.css';
 
 function App() {
 

@@ -1,25 +1,11 @@
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
+import { AppBar, Toolbar, Typography, CardMedia, CardContent, Box} from "@mui/material";
+import SearchBar from "../searchBar/searchBar";
 import './header.css';
-import { useState } from "react";
 
 const Header = ({ handleSearch }) => {
-    const [searchTerm, setSearchTerm] = useState('');
-
-    const handleInputChange = (event) => {
-        const term = event.target.value;
-        setSearchTerm(term);
-    };
-
-    const handleSearchOnKeyPress = () => {
-        if (event.key === 'Enter') {
-            handleSearch(searchTerm);
-        }
-    };
 
 	return (
+        <>
 		<AppBar position="static" sx={{ backgroundColor: '#ffffff' }}> 
             <Toolbar sx={{ justifyContent: 'center' }}>
                 <Typography
@@ -30,15 +16,22 @@ const Header = ({ handleSearch }) => {
                 >
                     Image Gallery
                 </Typography>
-                <TextField
-                    label="Search"
-                    variant="outlined"
-                    onChange={handleInputChange}
-                    onKeyPress={handleSearchOnKeyPress}
-					className="textFieldCustomStyles" 
-                />
+                <SearchBar handleSearch={handleSearch}/>
             </Toolbar>
         </AppBar>
+        <Box position="relative">
+            <CardMedia
+                component="img"
+                image="src\assets\mountain.jpg"
+                alt="header_cover"
+                style={{ objectFit: 'cover', height: "22rem" }}
+            />
+            <CardContent className="cover-text">
+                <Typography variant="h6">Download high-quality images by creators</Typography>
+                <Typography variant="body1">Over 2.4 million+ stock images by our talented community</Typography>
+            </CardContent>
+        </Box>
+        </>
 	);
 }
 

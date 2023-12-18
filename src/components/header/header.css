@@ -1,13 +1,9 @@
-.textFieldCustomStyles {
-    background-color: #ECECEC;
-    width: 400px;
-    max-width: 90%;
-    border-radius: 4px;
-  }
-  
-  .textFieldCustomStyles .MuiOutlinedInput-root {
-    border-radius: 4px;
-    padding: 8px;
-    height: 40px;
-  }
-  
+.cover-text {
+  position: absolute;   
+  top: 50%; 
+  left: 50%;  
+  transform: translate(-50%, -50%); 
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  color: white
+}
