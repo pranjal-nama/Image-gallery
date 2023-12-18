@@ -13,7 +13,7 @@ const unsplashAPI = axios.create({
 export const fetchImages = async (query) => {
   try {
     const response = await unsplashAPI.get('/photos', {
-      params: { query, per_page: 10 },
+      params: { query, per_page: 20 },
     });
     return response.data;
   } catch (error) {
