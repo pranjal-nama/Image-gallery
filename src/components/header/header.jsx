@@ -43,7 +43,7 @@ const Header = ({ handleSearch }) => {
         <Box position="relative">
             <CardMedia
                 component="img"
-                image="src\assets\mountain.jpg"
+                image="src/assets/mountain.jpg"
                 alt="header_cover"
                 style={{ objectFit: 'cover', height: "15rem" }}
             />
