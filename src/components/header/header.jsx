@@ -1,14 +1,12 @@
-import { AppBar, Toolbar, Typography, CardMedia, CardContent, Box, Switch, Grid} from "@mui/material";
-import { useState } from "react";
+import { AppBar, Toolbar, Typography, CardMedia, CardContent, Box, Grid} from "@mui/material";
 import SearchBar from "../searchBar/searchBar";
 import './header.css';
 
 const Header = ({ handleSearch }) => {
-    const [darkMode, setDarkMode] = useState(false);
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-        // Example: document.body.classList.toggle('dark-mode');
-    };
+    // const [darkMode, setDarkMode] = useState(false);
+    // const toggleDarkMode = () => {
+    //     setDarkMode(!darkMode);
+    // };
 
 	return (
         <>
@@ -27,7 +25,7 @@ const Header = ({ handleSearch }) => {
                         <SearchBar handleSearch={handleSearch} />
                     </Grid>            
                 </Grid>
-                <Grid item sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                {/* <Grid item sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <Typography 
                         sx={{ flex: 1, whiteSpace: 'nowrap' }}
                         color="textSecondary"
@@ -35,7 +33,7 @@ const Header = ({ handleSearch }) => {
                         Dark Mode
                     </Typography>
                     <Switch checked={darkMode} onChange={toggleDarkMode} />
-                </Grid>
+                </Grid> */}
             </Toolbar>
         </AppBar>
         <Box position="relative">
