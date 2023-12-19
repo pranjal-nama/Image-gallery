@@ -41,10 +41,11 @@ const ImageGrid = ({ images }) => {
                                         />
                                         <Box>
                                             <Typography variant="subtitle2">{image?.user?.first_name}</Typography>
-                                            <Typography variant="caption" display="flex" alignItems="center">
-                                                {image.user?.instagram_username && <span style={{ marginRight: '5px' }}>@</span>}
-                                                {image?.user?.instagram_username}
-                                            </Typography>
+                                            {image?.user?.instagram_username && (
+                                                <Typography variant="caption" display="flex" alignItems="center">
+                                                    @{image?.user?.instagram_username}
+                                                </Typography>
+                                            )}
                                         </Box>
                                     </Box>
                                     <Box display="flex" alignItems="center">
