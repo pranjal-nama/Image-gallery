@@ -27,8 +27,8 @@ const ImageGrid = ({ images }) => {
                         <Card onClick={() => handleImageClick(image)} style={{ cursor: 'pointer' }}>
                             <CardMedia
                                 component="img"
-                                image={image.links.download}
-                                alt={image.alt_description}
+                                image={image?.urls.thumb}
+                                alt={image?.alt_description}
                                 style={{ objectFit: 'cover' }}
                             />
                             <CardContent>
