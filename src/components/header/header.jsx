@@ -43,9 +43,9 @@ const Header = ({ handleSearch }) => {
         <Box position="relative">
             <CardMedia
                 component="img"
-                image="src/assets/mountain.jpg"
+                image="https://images.unsplash.com/photo-1484318571209-661cf29a69c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTN8fHxlbnwwfHx8fHw%3D"
                 alt="header_cover"
-                style={{ objectFit: 'cover', height: "15rem" }}
+                style={{ objectFit: 'cover', height: "18rem" }}
             />
             <CardContent className="cover-text">
                 <Typography variant="h6" style={{ fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.7rem' }}>
