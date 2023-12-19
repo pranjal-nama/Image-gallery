@@ -2,8 +2,6 @@ import { useState } from "react";
 import { IconButton, InputAdornment, OutlinedInput } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import ClearIcon from '@mui/icons-material/Clear';
-import "./searchBar.css";
-
 
 const SearchBar = ({ handleSearch }) => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -28,7 +26,7 @@ const SearchBar = ({ handleSearch }) => {
                 value={searchTerm}
                 onChange={handleInputChange}
                 placeholder="Search high-resolution images"
-                className="search-input"
+                style={{ height: "2.5rem" }}
                 startAdornment={
                     <InputAdornment position="start">
                         <IconButton type="submit" size="small">
@@ -38,11 +36,9 @@ const SearchBar = ({ handleSearch }) => {
                 }
                 endAdornment={
                     <InputAdornment position="end">
-                        {searchTerm && (
-                            <IconButton size="small" onClick={clearSearch}>
-                                <ClearIcon />
-                            </IconButton>
-                        )}
+                        <IconButton size="small" onClick={clearSearch}>
+                            <ClearIcon />
+                        </IconButton>
                     </InputAdornment>
                 }
             />
