@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { IconButton, InputAdornment, OutlinedInput } from "@mui/material";
+import { IconButton, InputAdornment, OutlinedInput, useMediaQuery } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import ClearIcon from '@mui/icons-material/Clear';
 
 const SearchBar = ({ handleSearch }) => {
     const [searchTerm, setSearchTerm] = useState("");
+    const isMobileScreen = useMediaQuery('(max-width:600px)');
 
     const handleInputChange = (event) => {
         setSearchTerm(event.target.value);
@@ -17,7 +18,6 @@ const SearchBar = ({ handleSearch }) => {
 
     const clearSearch = () => {
         setSearchTerm("");
-        handleSearch("");
     };
 
     return (
@@ -26,7 +26,8 @@ const SearchBar = ({ handleSearch }) => {
                 value={searchTerm}
                 onChange={handleInputChange}
                 placeholder="Search high-resolution images"
-                style={{ height: "2.5rem", width: "50rem", borderRadius: "100px", background: "#ffffff" }}
+                style={{ height: "2.5rem", width: isMobileScreen ? "100%" : "45rem",
+                maxWidth: "100%", borderRadius: "100px", background: "#ffffff" }}
                 startAdornment={
                     <InputAdornment position="start">
                         <IconButton type="submit" size="small">

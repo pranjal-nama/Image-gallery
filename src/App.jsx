@@ -5,8 +5,7 @@ import { fetchImages } from './api';
 import './App.css';
 
 function App() {
-
-  const [searchQuery, setSearchQuery] = useState('nature');
+  const [searchQuery, setSearchQuery] = useState('moon');
   const [images, setImages] = useState([]);
 
   const fetchImagesFromAPI = async (query) => {

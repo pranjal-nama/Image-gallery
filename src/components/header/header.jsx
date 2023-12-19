@@ -8,6 +8,10 @@ const Header = ({ handleSearch }) => {
     //     setDarkMode(!darkMode);
     // };
 
+    const handleSearchChange = (query) => {
+        handleSearch(query);
+    }
+
 	return (
         <>
 		<AppBar position="static" sx={{ backgroundColor: '#ffffff' }}> 
@@ -22,7 +26,7 @@ const Header = ({ handleSearch }) => {
                 </Typography>
                 <Grid container justifyContent="center" alignItems="center">
                     <Grid item>
-                        <SearchBar handleSearch={handleSearch} />
+                        <SearchBar handleSearch={handleSearchChange} />
                     </Grid>            
                 </Grid>
                 {/* <Grid item sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -50,7 +54,7 @@ const Header = ({ handleSearch }) => {
                 <Typography variant="body1" style={{ marginBottom: '0.5rem' }}>
                     Over 2.4 million+ stock images by our talented community
                 </Typography>
-                <SearchBar handleSearch={handleSearch}/>
+                <SearchBar handleSearch={handleSearchChange}/>
             </CardContent>
         </Box>
         </>
