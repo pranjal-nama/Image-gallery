@@ -46,8 +46,12 @@ const Header = ({ handleSearch }) => {
                 style={{ objectFit: 'cover', height: "15rem" }}
             />
             <CardContent className="cover-text">
-                <Typography variant="h6">Download high-quality images by creators</Typography>
-                <Typography variant="body1">Over 2.4 million+ stock images by our talented community</Typography>
+                <Typography variant="h6" style={{ fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.7rem' }}>
+                    Download high-quality images by creators
+                </Typography>
+                <Typography variant="body1" style={{ marginBottom: '0.5rem' }}>
+                    Over 2.4 million+ stock images by our talented community
+                </Typography>
                 <SearchBar handleSearch={handleSearch}/>
             </CardContent>
         </Box>

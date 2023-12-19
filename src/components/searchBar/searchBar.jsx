@@ -26,7 +26,7 @@ const SearchBar = ({ handleSearch }) => {
                 value={searchTerm}
                 onChange={handleInputChange}
                 placeholder="Search high-resolution images"
-                style={{ height: "2.5rem" }}
+                style={{ height: "2.5rem", width: "50rem", borderRadius: "100px", background: "#ffffff" }}
                 startAdornment={
                     <InputAdornment position="start">
                         <IconButton type="submit" size="small">
