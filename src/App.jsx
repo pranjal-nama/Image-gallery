@@ -10,17 +10,17 @@ function App() {
 
   const fetchImagesFromAPI = async (query) => {
     try {
-      const data = await fetchImages(query);
-      setImages(data);
+      if (query.trim() !== '') {
+        const data = await fetchImages(query);
+        setImages(data);
+      }
     } catch (error) {
       console.error('Error fetching images:', error);
     }
   };
 
   useEffect(() => {
-    if (searchQuery.trim() !== '') {
       fetchImagesFromAPI(searchQuery);
-    }
   }, [searchQuery]);
 
   const handleSearch = (query) => {
