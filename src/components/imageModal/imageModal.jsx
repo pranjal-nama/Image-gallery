@@ -28,12 +28,6 @@ const ImageModal = ({ open, handleClose, image }) => {
               )}
             </Box>
           </Box>
-          <Box display="flex" alignItems="center">
-            <IconButton size="small" color="primary" aria-label="like">
-              <FavoriteIcon fontSize="small" />
-            </IconButton>
-            <Typography variant="body2">{image?.likes}</Typography>
-          </Box>
         </Box>
 
         <CardMedia 
@@ -43,22 +37,32 @@ const ImageModal = ({ open, handleClose, image }) => {
           style={{ maxWidth: '100%', height: 'auto', marginTop: '10px' }} 
         />
 
-        {image?.sponsorship?.sponsor?.location && (
-          <Box mt={2} display="flex" alignItems="center">
-            <LocationOnIcon style={{ marginRight: '8px', color: '#2196f3' }} />
-            <Typography variant="body2">
-              {`${image?.sponsorship?.sponsor?.location}`}
-            </Typography>
+        <Box display={"flex"} justifyContent={"space-between"}>
+          <Box>
+            {image?.sponsorship?.sponsor?.location && (
+              <Box mt={2} display="flex" alignItems="center">
+                <LocationOnIcon style={{ marginRight: '8px', color: '#2196f3' }} />
+                <Typography variant="body2">
+                  {`${image?.sponsorship?.sponsor?.location}`}
+                </Typography>
+              </Box>
+            )}
+            {image?.created_at && (
+              <Box mt={1} display="flex" alignItems="center">
+                <DateRangeIcon style={{ marginRight: '8px', color: '#4caf50' }} />
+                <Typography variant="body2">
+                  {`Published on ${formatDate(image?.created_at)}`}
+                </Typography>
+              </Box>
+            )}
           </Box>
-        )}
-        {image?.created_at && (
-          <Box mt={1} display="flex" alignItems="center">
-            <DateRangeIcon style={{ marginRight: '8px', color: '#4caf50' }} />
-            <Typography variant="body2">
-              {`Published on ${formatDate(image?.created_at)}`}
-            </Typography>
+          <Box display="flex" alignItems="center">
+            <IconButton size="small" color="primary" aria-label="like">
+              <FavoriteIcon fontSize="small" />
+            </IconButton>
+            <Typography variant="body2">{image?.likes}</Typography>
           </Box>
-        )}
+        </Box>
 
         <Box mt={2}>
           <Typography variant="subtitle2">Tags:</Typography>
